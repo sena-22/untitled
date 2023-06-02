@@ -12,9 +12,9 @@
 -
 
 ## Related Tickets & Documents
+
 - Related Issue #
 - Closes #
-
 
 ## Changes
 
@@ -26,7 +26,8 @@
 | ------ | :------: |
 | 기능 1 |   img    |
 
-## Test Checklist 
+## Test Checklist
+
 - []
 
-## Other information 
+## Other information
