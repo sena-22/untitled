@@ -1,10 +1,30 @@
 module.exports = {
-  env: {browser: true, es2020: true, node: true},
-  extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'plugin:react-hooks/recommended'],
   parser: '@typescript-eslint/parser',
-  parserOptions: {ecmaVersion: 'latest', sourceType: 'module'},
-  plugins: ['react-refresh'],
+  plugins: ['@typescript-eslint'],
+  extends: ['airbnb', 'plugin:@typescript-eslint/recommended', 'plugin:prettier/recommended'],
   rules: {
-    'react-refresh/only-export-components': 'warn',
+    'prettier/prettier': 0,
+    'react/jsx-filename-extension': ['warn', { extensions: ['.tsx'] }],
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      {
+        ts: 'never',
+        tsx: 'never',
+      },
+    ],
+    'import/prefer-default-export': 'off',
+    'react/jsx-uses-react': 'off',
+    'react/react-in-jsx-scope': 'off',
+    'react/jsx-no-constructed-context-values': 'off',
+    'react/require-default-props': 'off',
+    'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
   },
-}
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      },
+    },
+  },
+};
