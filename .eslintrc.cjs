@@ -18,13 +18,14 @@ module.exports = {
     'react/react-in-jsx-scope': 'off',
     'react/jsx-no-constructed-context-values': 'off',
     'react/require-default-props': 'off',
-    'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
+    'import/no-extraneous-dependencies': 'off',
   },
   settings: {
     'import/resolver': {
       node: {
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
       },
+      typescript: {},
     },
   },
 };
