@@ -3,6 +3,32 @@ module.exports = {
   plugins: ['@typescript-eslint'],
   extends: ['airbnb', 'plugin:@typescript-eslint/recommended', 'plugin:prettier/recommended'],
   rules: {
+    'import/order': [
+      'error',
+      {
+        groups: [
+          'builtin',
+          'external',
+          'internal',
+          ['parent', 'sibling', 'index'],
+          'type',
+          'unknown',
+        ],
+        pathGroups: [
+          {
+            pattern: '{react}',
+            group: 'builtin',
+            position: 'before',
+          },
+        ],
+        pathGroupsExcludedImportTypes: ['react'],
+        'newlines-between': 'always',
+        alphabetize: {
+          order: 'asc',
+          caseInsensitive: true,
+        },
+      },
+    ],
     'prettier/prettier': 0,
     'react/jsx-filename-extension': ['warn', { extensions: ['.tsx'] }],
     'import/extensions': [
